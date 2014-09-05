@@ -1,0 +1,90 @@
+body {
+	background-color: #eee;
+}
+fieldset {
+	margin: 10px 0px 20px 0px;
+	border-radius: 4px;
+	border 1px solid silver;
+}
+.panel {
+	position: fixed;
+	float: left;
+	width: 140px;
+	height: 90%;
+	background: #eee;
+	border: 1px solid rgba(0,0,0,0.5);
+	border-radius: 6px;
+	box-shadow: inset 0 -2px 4px #aaa, inset 0 2px 4px #fff, 0 2px 6px rgba(0,0,0,0.5);
+	padding: 0px 20px 0px 10px;
+}
+.content {
+	margin-left: 150px;
+	padding: 30px 10px 30px 30px;
+	height: 90%;
+}
+.title {
+	text-align: center;
+	font-family: "Helvetica Neue", sans-serif;
+	color: #444;
+	text-shadow: 0 1px 1px #fff;
+	font-size: 14px;
+	margin: -0 -20px 10px -10px;
+	padding: 5px 15px;
+	border-radius: 5px 5px 0 0;
+	background: rgba(0,0,0,0.2);
+	border-bottom: 2px groove rgba(255,255,255,0.75);
+	box-shadow: inset 0 1px 1px rgba(255,255,255,0.5);
+}
+img.center {
+	display: block;
+	margin-top: 240px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.button {
+	color: #42455a; border: 1px outset #c9c3ba; border-radius: 4px;
+	padding: 0.3em; padding-left: 1em;
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
+	cursor: pointer;
+}
+.button:hover {
+	background: -webkit-linear-gradient(top, rgba(200,200,200,1) 0%,rgba(120,120,120,0.2) 100%);
+}
+.control {
+	font-size: x-small;
+}
+input[type="radio"] {
+	cursor: pointer;
+}
+.page {
+	position: relative;
+	width: 400px;
+	padding: 50px;
+	margin: 0 auto;
+	background-color: #fff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+.page:before, .page:after {
+	position: absolute;
+	width: 40%;
+	height: 10px;
+	content: ' ';
+	left: 12px;
+	bottom: 12px;
+	background: transparent;
+	-webkit-transform: skew(-5deg) rotate(-5deg);
+	transform: skew(-5deg) rotate(-5deg);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+	z-index: -1;
+} 
+.page:after {
+	left: auto;
+	right: 12px;
+	-webkit-transform: skew(5deg) rotate(5deg);
+	transform: skew(5deg) rotate(5deg);
+}
+.page_number {
+	text-align: center;
+	font-style: italic;
+	margin-bottom: 20px;
+}

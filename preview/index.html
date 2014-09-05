@@ -1,0 +1,36 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="http://print.home/preview/style.css"/>
+<script src="http://print.home/preview/preview.js"></script>
+</head>
+<body>
+  <div class="panel">
+    <h2 class="title">Print Preview</h2>
+    <div id="print" class="button">Print</div>
+    <fieldset>
+      <legend>Range</legend>
+      <div class="control">
+        <input type="radio" name="range" value="all" checked>All Pages
+      </div>
+      <div class="control" title="Specify one or more page ranges, e.g. 1-3,7,11">
+        <input type="radio" name="range" value="pages">Pages
+        <input type="text" id="rangestr" name="rangestr" style="width:100%" disabled>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Orientation</legend>
+      <div class="control">
+        <input type="radio" name="orientation" value="portrait" checked> Portrait
+      </div>
+      <div class="control">
+        <input type="radio" name="orientation" value="landscape"> Landscape
+      </div>
+    </fieldset>
+
+  </div>
+
+  <div id="content" class="content">
+    <img class="center" src="http://print.home/preview/loader-dark.gif"/>
+  </div>
+</body>
+</html>
