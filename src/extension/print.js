@@ -1,5 +1,3 @@
-var preview = "http://print.home/preview";
-
 chrome.contextMenus.create({"title": "Print page", "contexts": ["page"], "onclick": function(info, tab) {
 	chrome.pageCapture.saveAsMHTML({tabId: tab.id}, function(data) {
 		var script = new XMLHttpRequest();

@@ -1,6 +1,3 @@
-var server = "http://print.home:8080";
-var preview = "http://print.home/preview";
-
 (function(data) {
 	var request = function(method, url, onComplete, data) {
 		var req = new XMLHttpRequest();

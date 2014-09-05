@@ -1,5 +1,3 @@
-PRINT_CMD = "lp -dhp"
-
 require './http'
 require './capture'
 require './pages'

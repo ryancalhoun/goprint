@@ -1,5 +1,3 @@
-var server = "http://print.home:8080"; 
-
 function preview_main()
 {
 	var file = get_query_string()["file"];
