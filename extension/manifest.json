@@ -1,15 +1,14 @@
 {
+   "manifest_version": 2,
+   "name": "Go Print",
+   "version": "0.9.0.3",
+   "permissions": [ "pageCapture", "tabs", "contextMenus", "http://print.home/" ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
    "background": {
       "scripts": [ "print.js" ]
    },
-   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
    "icons": {
       "128": "print-128.png",
       "32": "print-32.png"
-   },
-   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy44KdfOs9SYmW37x++2ThE+cpKqXBJ22GGDbKAFiL0x84Qg9VSv34M2WIPPq9H6JYz0S2yGKvKzkfqvBTm42veikhsYPSOzkZsLrLQ0chRh4t0vtPsr5LBOPfPhFnBQpMJQJXY1TcAcuebVLPG9fYn3iuGxOWc+Ab9vdyuocI+g6RnrItakdFQLuXSs+h4gKuWokvLmYvMYlYwcRpgRmFcavbGKYoz3wFJZieLi22TkBCXiTKW7ncOcTAhVQoRGaDYcQlsfjjZGh5Lk6dA5fgIz3ETFOSdG6dCDOBnLAmvBqkzEpNcHN9skujyEKQGME6P/mt2jjgFH4AAZmM+LKKQIDAQAB",
-   "manifest_version": 2,
-   "name": "Go Print",
-   "permissions": [ "pageCapture", "tabs", "contextMenus", "http://print.home/" ],
-   "version": "0.9.0.3"
+   }
 }
