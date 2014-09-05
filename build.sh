@@ -9,6 +9,7 @@ mkdir -p build/server
 previewurl=$(grep preview.url build.conf | awk -F= '{print $2}')
 serverurl=$(grep server.url build.conf | awk -F= '{print $2}')
 printcmd=$(grep print.cmd build.conf | awk -F= '{print $2}')
+extversion=$(grep ext.version build.conf | awk -F= '{print $2}')
 
 cat > build/extension/print.js <<END
 var preview = "$previewurl";
@@ -29,6 +30,9 @@ for f in $(find src -type f ! -name '*.json'); do
 	cat $f >> $out
 done
 
-cat src/extension/manifest.json |
-	sed 's|\("permissions".*\)\(\s],\)|\1, "'$(echo $previewurl | sed 's|\(\w\+://[^/]\+/\?\).*|\1|')'"\2|' \
-	> build/extension/manifest.json
+baseurl=$(echo $previewurl | sed 's|\(\w\+://[^/]\+/\?\).*|\1|')
+
+cat src/extension/manifest.json | sed > build/extension/manifest.json \
+'s|\("permissions".*\)\(\s],\)|\1, "'$baseurl'"\2|;'\
+'s|\(.*\)\("manifest_version".*:.*\)|\1\2\
+\1"version": "'$extversion'",|'
