@@ -1,3 +1,5 @@
+PRINT_CMD = "lp -dhp"
+
 require './http'
 require './capture'
 require './pages'
@@ -33,7 +35,7 @@ srv.on("/print", /POST/) {|req,res|
 	end
 
 	pid = fork {
-		exec "lp -dhp #{out}"
+		exec "#{PRINT_CMD} #{out}"
 	}
 	Process.waitpid pid
 	FileUtils.rm file
