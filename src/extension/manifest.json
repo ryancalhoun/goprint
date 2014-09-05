@@ -2,7 +2,7 @@
    "manifest_version": 2,
    "name": "Go Print",
    "version": "0.9.0.3",
-   "permissions": [ "pageCapture", "tabs", "contextMenus", "http://print.home/" ],
+   "permissions": [ "pageCapture", "tabs", "contextMenus" ],
    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
    "background": {
       "scripts": [ "print.js" ]

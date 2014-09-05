@@ -24,8 +24,11 @@ cat > build/server/server.rb <<END
 PRINT_CMD = "$printcmd"
 END
 
-for f in $(find src -type f); do
+for f in $(find src -type f ! -name '*.json'); do
 	out=$(echo $f | sed 's|src|build|')
 	cat $f >> $out
 done
 
+cat src/extension/manifest.json |
+	sed 's|\("permissions".*\)\(\s],\)|\1, "'$(echo $previewurl | sed 's|\(\w\+://[^/]\+/\?\).*|\1|')'"\2|' \
+	> build/extension/manifest.json
